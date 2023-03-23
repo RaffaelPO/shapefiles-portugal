@@ -1,10 +1,10 @@
-# Shapefiles Portugal
+# Shapefiles Portugal 🗺️
  "Shapefiles Portugal" is the library containing the geospatial data files of the 3092 parishes (freguesias) and 308 municipalities (municípios) of Portugal.
  
  =============================================================================
 
 ## Usage
-After cloning the library, the shapefile (.shp) - of municipalities or parishes - can be loaded into R Studio for geospatial analysis: 
+After cloning this repository, the shapefile (.shp) - of municipalities or parishes - can be loaded into R Studio for geospatial analysis: 
 
 ```
 # Install and load the necessary packages from CRAN: 
