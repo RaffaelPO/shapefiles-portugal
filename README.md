@@ -1,4 +1,4 @@
-# Shapefiles Portugal
+# Shapefiles Portugal 🗺️
  "Shapefiles Portugal" is the library containing the geospatial data files of the 3092 parishes (freguesias) and 308 municipalities (municípios) of Portugal.
  
  =============================================================================
