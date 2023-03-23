@@ -33,7 +33,7 @@ ggplot(map1) + geom_sf()
 ===========================================================================
 
 
-## Explanation
+## Description
 
 These files come from an open database from 2014 which is no longer available to consulte. The source is "Carta Administrativa Oficial de Portugal (CAOP)- 2014" from [Direcção-Geral do Território](https://www.dgterritorio.gov.pt/). The Direcção-Geral do Território has a section dedicated to [open data](https://www.dgterritorio.gov.pt/dados-abertos) where you can consult other databases.  
 
