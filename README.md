@@ -4,7 +4,7 @@
  =============================================================================
 
 ## Usage
-After cloning the library, the shapefile (.shp) - of municipalities or parishes - can be loaded into R Studio for geospatial analysis: 
+After cloning this repository, the shapefile (.shp) - of municipalities or parishes - can be loaded into R Studio for geospatial analysis: 
 
 ```
 # Install and load the necessary packages from CRAN: 
