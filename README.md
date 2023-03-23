@@ -16,7 +16,7 @@ library(sf)
 
 # Load the shapefiles from your file location:
 
-map1 <- st_read("~/shapefiles-portugal/maps/freguesias/._rui_freguesias.shp")  
+map1 <- st_read("~/shapefiles-portugal/maps/freguesias-files/freguesias_pt.shp")  
 # We're using parishes (freguesias) as an example
 
 # Visualizing the map:
