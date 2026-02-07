@@ -1,4 +1,4 @@
-# Mapping Portugal - Geospatial Data with R 🗺️
+# 🗺️ Mapping Portugal - Geospatial Data with R 🗺️
 
 **This repository provides standardized geospatial files for Portugal's 3.092 parishes and 308 municipalities and was designed to bridge the gap between raw data and geographic visualization**. 
 
