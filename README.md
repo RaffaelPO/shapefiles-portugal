@@ -3,7 +3,7 @@
 **This repository provides standardized geospatial files for Portugal's 3.092 parishes and 308 municipalities and was designed to bridge the gap between raw data and geographic visualization**. 
 
 
-These files provide a reliable baseline for **mapping administrative trends in [RStudio](https://posit.co/download/rstudio-desktop/)**. They enable you to visualize how variables—including census results, election returns, and socioeconomic indicators—translate into geographic insights."
+These files provide a reliable baseline for **mapping administrative trends in [RStudio](https://posit.co/download/rstudio-desktop/)**. They enable you to visualize how variables - including census results, election returns, and socioeconomic indicators - translate into visual geographic insights."
 
 ### Project Context
 
