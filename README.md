@@ -1,43 +1,85 @@
-# Shapefiles Portugal 🗺️
- "Shapefiles Portugal" 🗺️ is the repository of PÚBLICO Data Unit containing the geospatial data files of the 3092 parishes (freguesias) and 308 municipalities (municípios) of Portugal.
- 
+# Mapping Portugal - Geospatial Data with R 🗺️
+
+**This repository provides standardized geospatial files for Portugal's 3.092 parishes and 308 municipalities and was designed to bridge the gap between raw data and geographic visualization**. 
+
+
+These files provide a reliable baseline for **mapping administrative trends in [RStudio](https://posit.co/download/rstudio-desktop/)**. They enable you to visualize how variables—including census results, election returns, and socioeconomic indicators—translate into geographic insights."
+
+### Project Context
+
+This repository was developed during my work with the **[PÚBLICO Data Unit](https://www.publico.pt/dados)** to solve a recurring problem: the lack of accessible, ready-to-use shapefiles for Portuguese administrative divisions.
+
+Although the files are based on the **2014 CAOP (Official Administrative Map of Portugal)** standards, it remains a structural reference for longitudinal studies and mapping trends.
+
  ===========================================================================
 
 ## Usage
-After cloning this repository, the shapefile (.shp) - of municipalities or parishes - can be loaded into R Studio for geospatial analysis: 
+
+Once you have cloned this repository, you can import the shapefiles (available for both municipalities and parishes) into R for geospatial analysis and visualization. 
+
+### 1. Environment Setup
+
+To handle spatial data, we rely on the `sf` package. For data manipulation and visualization, we use the `tidyverse`. 
+
+The following block ensures these dependencies are installed and present.
 
 ```
-# Install and load the necessary packages from CRAN: 
+# Installing packages
 
 install.packages("tidyverse")
 install.packages("sf")
+
+# Loading packages
+
 library(tidyverse)
 library(sf)
 
-# Load the shapefiles from your file location:
+```
+### 2. Importing the shapefiles
 
-map1 <- st_read("~/shapefiles-portugal/maps/freguesias-files/freguesias_pt.shp")  
-# We're using parishes (freguesias) as an example
+After loading the libraries, import the shapefiles using the `st_read()` function. 
 
-# Visualizing the map:
+To ensure your code is reproducible, it's recommended to use relative paths based on your project’s root directory.
 
-ggplot(map1) + geom_sf() 
+```
+# Importing the parish (freguesia) shapefiles
 
+map_parishes_ <- st_read("~/shapefiles-portugal/maps/freguesias-files/freguesias_pt.shp")  
+
+# For municipalities, use:
+map_municipalities <- st_read("~/shapefiles-portugal/maps/municipios-files/municipios_pt.shp")
 
 ```
 
+### 3. Visualizing the maps 
+
+The quickest way to verify your data is to plot in R is by using `ggplot2`. The `geom_sf()` function is designed to handle "Simple Features" objects automatically, maintaining the correct aspect ratio of the map.
+
+```
+# Generate a basic plot of all 3,092 parishes
+
+ggplot(data = map_parishes) +
+  geom_sf() +
+  labs(
+    title = "Map of portuguese parishes",
+    caption = "Source: CAOP 2014",
+  )
+```
+
 <p align="center">
-  <img src="https://github.com/publico-data/shapefiles-portugal/blob/main/maps/freguesias-files/000012.jpg" />
+  <img src="https://github.com/RaffaelPO/shapefiles-portugal/blob/main/maps/freguesias-files/000012.jpg" />
 </p>
 
 ===========================================================================
 
 
-## Description
+## Data Dictionary & Provenance
 
-These files come from an open database from 2014 which is no longer available to consulte. The source is "Carta Administrativa Oficial de Portugal (CAOP)- 2014" from [Direcção-Geral do Território](https://www.dgterritorio.gov.pt/). The Direcção-Geral do Território has a section dedicated to [open data](https://www.dgterritorio.gov.pt/dados-abertos) where you can consult other databases.  
+The primary source of these shapefiles is the **Carta Administrativa Oficial de Portugal (CAOP)- 2014**, from [Direcção-Geral do Território](https://www.dgterritorio.gov.pt/). While the original 2014 distribution is no longer hosted at its initial URL, the shapefiles remain a baseline for  longitudinal spatial analysis in Portugal.
 
-Based on our current files, we explain in the following table what each variable means:
+The Direcção-Geral do Território has a section dedicated to [open data](https://www.dgterritorio.gov.pt/dados-abertos), where you can consult other databases.  
+
+### Variable Definitions
 
 | Header | Description | Data Type |
 |---|---|---|
