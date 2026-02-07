@@ -11,8 +11,6 @@ This repository was developed during my work with the **[PÚBLICO Data Unit](htt
 
 Although the files are based on the **2014 CAOP (Official Administrative Map of Portugal)** standards, it remains a structural reference for longitudinal studies and mapping trends.
 
- ===========================================================================
-
 ## Usage
 
 Once you have cloned this repository, you can import the shapefiles (available for both municipalities and parishes) into R for geospatial analysis and visualization. 
@@ -33,7 +31,6 @@ install.packages("sf")
 
 library(tidyverse)
 library(sf)
-
 ```
 ### 2. Importing the shapefiles
 
@@ -47,8 +44,8 @@ To ensure your code is reproducible, it's recommended to use relative paths base
 map_parishes_ <- st_read("~/shapefiles-portugal/maps/freguesias-files/freguesias_pt.shp")  
 
 # For municipalities, use:
-map_municipalities <- st_read("~/shapefiles-portugal/maps/municipios-files/municipios_pt.shp")
 
+map_municipalities <- st_read("~/shapefiles-portugal/maps/municipios-files/municipios_pt.shp")
 ```
 
 ### 3. Visualizing the maps 
@@ -69,8 +66,6 @@ ggplot(data = map_parishes) +
 <p align="center">
   <img src="https://github.com/RaffaelPO/shapefiles-portugal/blob/main/maps/freguesias-files/000012.jpg" />
 </p>
-
-===========================================================================
 
 
 ## Data Dictionary & Provenance
