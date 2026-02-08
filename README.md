@@ -1,11 +1,11 @@
-# 🗺️ Mapping Portugal - Geospatial Data with R 🗺️
+# 🗺️ Mapping Portugal - Geospatial data with R 🗺️
 
 **This repository provides standardized geospatial files for Portugal's 3.092 parishes and 308 municipalities and was designed to bridge the gap between raw data and geographic visualization**. 
 
 
 These files provide a reliable baseline for **mapping administrative trends in [RStudio](https://posit.co/download/rstudio-desktop/)**. They enable you to visualize how variables - including census results, election returns, and socioeconomic indicators - translate into visual geographic insights."
 
-### Project Context
+### Project context
 
 This repository was developed during my work with the **[PÚBLICO Data Unit](https://www.publico.pt/dados)** to solve a recurring problem: the lack of accessible, ready-to-use shapefiles for Portuguese administrative divisions.
 
@@ -15,7 +15,7 @@ Although the files are based on the **2014 CAOP (Official Administrative Map of 
 
 Once you have cloned this repository, you can import the shapefiles (available for both municipalities and parishes) into R for geospatial analysis and visualization. 
 
-### 1. Environment Setup
+### 1. Environment setup
 
 To handle spatial data, we rely on the `sf` package. For data manipulation and visualization, we use the `tidyverse`. 
 
@@ -68,7 +68,7 @@ ggplot(data = map_parishes) +
 </p>
 
 
-## Data Dictionary & Provenance
+## Data dictionary & Provenance
 
 The primary source of these shapefiles is the **Carta Administrativa Oficial de Portugal (CAOP)- 2014**, from [Direcção-Geral do Território](https://www.dgterritorio.gov.pt/). While the original 2014 distribution is no longer hosted at its initial URL, the shapefiles remain a baseline for  longitudinal spatial analysis in Portugal.
 
@@ -79,13 +79,13 @@ The Direcção-Geral do Território has a section dedicated to [open data](https
 | Header | Description | Data Type |
 |---|---|---|
 | `dicofre` or `dico` | The unique number assigned to an individual parish or municipality. | number |
-| `freguesia` | The name of the corresponding parish. | character |
-| `municipio` | The name of the corresponding municipality and, typically, it's a set of parishes. | character |
+| `freguesia` | Name of the corresponding parish. | character |
+| `municipio` | Name of the corresponding municipality, which, typically, it's a set of parishes. | character |
 | `distrito` | Equivalent to the states, because it's a set of municipalities. | character |
 | `nuts_i` | NUTS is the acronym for "Nomenclature of Territorial Units for Statistics", a hierarchical system for dividing up the territory into regions. `nuts_i` divides Portugal in 3 groups: Continente, Região Autónoma dos Açores, Região Autónoma da Madeira. | character |
 | `nuts_ii` | Divides Portugal in 7 groups: Norte, Centro, Área Metropolitana de Lisboa, Alentejo, Algarve, Região Autónoma dos Açores, Região Autónoma da Madeira. | character |
 | `nuts_iii` | Divides Portugal in 25 groups: Alto Minho, Cávado, Ave, Área Metropolitana do Porto, Alto Tâmega, Tâmega e Sousa, Douro, Terras de Trás-os-Montes, Oeste, Região de Aveiro, Região de Coimbra, Região de Leiria, Viseu Dão Lafões, Beira Baixa, Médio Tejo, Beiras e Serra da Estrela, Área Metropolitana de Lisboa, Alentejo Litoral, Baixo Alentejo, Lezíria do Tejo, Alto Alentejo, Alentejo Central, Algarve, Região Autónoma dos Açores, Região Autónoma da Madeira.	| character |
-| `nuts1_id` | The corresponding number to identify the groups of `nuts_i` .| number |
-| `nuts2_id` | The corresponding number to identify the groups of `nuts_ii` .| number |
-| `nuts3_id` | The corresponding number to identify the groups of `nuts_iii` .| number |
+| `nuts1_id` | Corresponding number to identify the groups of `nuts_i` .| number |
+| `nuts2_id` | Corresponding number to identify the groups of `nuts_ii` .| number |
+| `nuts3_id` | Corresponding number to identify the groups of `nuts_iii` .| number |
 | `geometry` | These are the primitive geometric shapes like points, lines, and polygons. These shapes, together with data attributes that are linked to each shape, create the representation of the geographic data. |  |
